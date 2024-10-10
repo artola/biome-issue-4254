@@ -1,0 +1,16 @@
+{
+	"name": "biome-repro",
+	"version": "0.0.0",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"format": "biome format .",
+		"lint": "biome lint",
+		"check": "biome check",
+		"ci": "biome ci"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.3"
+	},
+	"packageManager": "yarn@1.22.19+sha1.4ba7fc5c6e704fce2066ecbfb0b0d8976fe62447"
+}
