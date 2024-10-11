@@ -1,19 +1,28 @@
-# Repro for #4225
+# Repro for #4254
 
 Running the following command should not error.
 
 ```sh
-yarn format --write --since $(git rev-parse HEAD)
+yarn lint
 ```
 
 Output:
 
 ```text
-flags/invalid ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+/biome-issue-4254/src/Button.tsx lint/style/useFilenamingConvention ━━━━━━━━━━
 
-  ✖ Incompatible arguments since and changed
+  ✖ The filename should be in kebab-case or equal to the name of an export.
+
+  ℹ The filename could be renamed to one of the following names:
+    button.tsx
+
+
+Checked 3 files in 19ms. No fixes applied.
+Found 1 error.
+lint ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ✖ Some errors were emitted while running checks.
 
 
 error Command failed with exit code 1.
-info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
 ```
